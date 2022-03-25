@@ -1,9 +1,18 @@
 import './App.css';
+import React from 'react';
+import SearchBox from "./components/Search";
 
-function App() {
-  return (
-    <h1>Testing</h1>
-  );
+class App extends React.Component {
+
+  state = {
+    response: null
+  }
+
+  render() { 
+    return(
+      <SearchBox/>
+    );
+  }
 }
-
+ 
 export default App;
