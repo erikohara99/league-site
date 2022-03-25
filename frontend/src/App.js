@@ -10,7 +10,9 @@ class App extends React.Component {
 
   render() { 
     return(
-      <SearchBox/>
+      <div className="content">
+        <SearchBox />
+      </div>
     );
   }
 }

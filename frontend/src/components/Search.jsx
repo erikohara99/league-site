@@ -2,7 +2,13 @@ import React from 'react';
 
 function Search(props) {
     return ( 
-        <h1>Here</h1>
+        <div className="searchbox-container">
+            <h1>StatChecked</h1>
+            <form>
+                <input type="text" name="username" placeholder="League username..."></input>
+                <button type="submit" onSubmit={props.onSubmit}>Search</button>
+            </form>
+        </div>
      );
 }
 
