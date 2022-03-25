@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import SearchBox from "./components/Search";
+import Profile from './components/Profile';
 const axios = require("axios");
 
 class App extends React.Component {
@@ -18,9 +19,10 @@ class App extends React.Component {
 
   render() { 
     return(
-      <div className="content">
+      <>
         <SearchBox onClick={this.handleSubmit}/>
-      </div>
+        {!this.state.response ? null : <Profile summoner={this.state.response}/>}
+      </>
     );
   }
 }

@@ -1,8 +1,25 @@
-.content {
+.searchbox-container {
   display: flex;
-  justify-content: center;
 }
 
-.content h1 {
+.profile-container {
+  display: inline-flex;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.searchbox-container, .profile-container, #root {
+  justify-content: center;
   text-align: center;
+}
+
+.profile-container img {
+  border:6px solid grey;
+  border-radius: 9999px;
+}
+
+.profile-level {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
 }
