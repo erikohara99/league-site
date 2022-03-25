@@ -4,9 +4,9 @@ function Search(props) {
     return ( 
         <div className="searchbox-container">
             <h1>StatChecked</h1>
-            <form>
-                <input type="text" name="username" placeholder="League username..."></input>
-                <button type="submit" onSubmit={props.onSubmit}>Search</button>
+            <form onSubmit={props.onClick}>
+                <input id="username" type="text" name="username" placeholder="League username..."></input>
+                <button type="submit">Search</button>
             </form>
         </div>
      );
