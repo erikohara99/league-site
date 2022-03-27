@@ -7,21 +7,29 @@ const axios = require("axios");
 class App extends React.Component {
 
   state = {
-    response: null
+    summoners: []
   }
 
   handleSubmit = async (e) => {
     e.preventDefault();
+    let {summoners} = this.state;
     const name = document.getElementById("username").value;
     const {data} = await axios.get(`http://localhost:3000/api/summoner/${name}`);
-    this.setState({response: data});
+    summoners.push(data);
+    this.setState({summoners});
   }
 
   render() { 
     return(
       <>
-        <SearchBox onClick={this.handleSubmit}/>
-        {!this.state.response ? null : <Profile summoner={this.state.response}/>}
+        <div className="searchbox-container">
+          <SearchBox onClick={this.handleSubmit}/>
+        </div>
+        <div className="profile-container">
+          {this.state.summoners.length === 0 ? null : this.state.summoners.map(summoner => {
+            return <Profile summoner={summoner} />
+          })}
+        </div>
       </>
     );
   }

@@ -1,25 +1,33 @@
-.searchbox-container {
+.profile-container, .searchbox-container {
   display: flex;
-}
-
-.profile-container {
-  display: inline-flex;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-.searchbox-container, .profile-container, #root {
   justify-content: center;
   text-align: center;
 }
 
-.profile-container img {
-  border:6px solid grey;
-  border-radius: 9999px;
+.profile {
+  border: 4px solid black;
+  padding: 8px;
+  margin: 0px 10px;
 }
 
-.profile-level {
-  background-color: black;
-  border-radius: 10px;
+.profile img {
+  border: 10px solid black;
+  border-radius: 100%;
+  transition: .75s ease;
+}
+
+.profile img:hover {
+  border-radius: 0px;
+}
+
+.profile .profile-level {
+  box-sizing: border-box;
+  position: relative;
+  top: -65px;
+  background-color: rgb(228, 208, 33);
+  border: 5px solid black;
   color: white;
+  width: 100px;
+  border-radius: 15px;
+  margin: auto;
 }
