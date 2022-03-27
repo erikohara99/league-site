@@ -5,8 +5,8 @@ function Search(props) {
         <div className="searchbox">
             <h1>StatChecked</h1>
             <form onSubmit={props.onClick}>
-                <input id="username" type="text" name="username" placeholder="League username..."></input>
-                <button type="submit">Search</button>
+                <input id="searchbox-input" type="text" name="username" placeholder="League username..."></input>
+                <button id="searchbox-button"type="submit">Search</button>
             </form>
         </div>
      );

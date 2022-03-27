@@ -13,7 +13,7 @@ class App extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     let {summoners} = this.state;
-    const name = document.getElementById("username").value;
+    const name = document.getElementById("searchbox-input").value;
     const {data} = await axios.get(`http://localhost:3000/api/summoner/${name}`);
     summoners.push(data);
     this.setState({summoners});
@@ -27,7 +27,7 @@ class App extends React.Component {
         </div>
         <div className="profile-container">
           {this.state.summoners.length === 0 ? null : this.state.summoners.map(summoner => {
-            return <Profile summoner={summoner} />
+            return <Profile summoner={summoner} key={summoner.puuid} />
           })}
         </div>
       </>
