@@ -10,10 +10,14 @@
   padding: 0 0 30px 0;
 }
 
+.profile-container {
+  flex-wrap: wrap;
+}
+
 .searchbox-container {
   background-color: grey;
   align-items: center;
-  height: 500px;
+  height: 400px;
 }
 
 #searchbox-name {
