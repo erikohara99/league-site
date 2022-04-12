@@ -20,7 +20,7 @@
   height: 400px;
 }
 
-#searchbox-name {
+#searchbox-name, .stats-ranked {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,11 +32,28 @@
   margin-right: 20px;
 }
 
-#searchbox-name h2 {
+#searchbox-name h2, .stats-ranked h2 {
   font-size: 30px;
   line-height: 30px;
   margin: 0;
   text-align: initial;
+}
+
+.stats-ranked {
+  height: 60px;
+}
+
+.stats-ranked h1 {
+  font-size: 40px;
+}
+
+.stats-ranked h2 {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.stats-ranked .winrate {
+  margin-right: 10px;
 }
 
 .profile {

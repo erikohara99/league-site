@@ -14,7 +14,7 @@ class App extends React.Component {
     e.preventDefault();
     let {summoners} = this.state;
     const name = document.getElementById("searchbox-input").value;
-    const {data} = await axios.get(`http://localhost:3000/api/summoner/${name}`);
+    const {data} = await axios.get(`http://localhost:3000/api/summoner/matches/${name}`);
     summoners.push(data);
     this.setState({summoners});
   }

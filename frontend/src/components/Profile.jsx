@@ -2,8 +2,9 @@ import React from 'react';
 
 function Profile(props) {
 
-    const {profileIconId, name, summonerLevel} = props.summoner;
-    let stylesLevel = {}
+    const {profileIconId, name, summonerLevel} = props.summoner.profile;
+    const {wins, losses, winrate, tier, rank} = props.summoner.matches_ranked;
+    let stylesLevel = {};
 
     if(summonerLevel < 25) stylesLevel = {backgroundColor: "black"};
     else if(summonerLevel < 50) stylesLevel = {backgroundColor: "brown"};
@@ -20,6 +21,13 @@ function Profile(props) {
             <img src={`http://ddragon.leagueoflegends.com/cdn/12.5.1/img/profileicon/${profileIconId}.png`} alt="profile icon for user"></img>
             <h1 className="profile-level" style={stylesLevel}>{summonerLevel}</h1>
             <h1 className="profile-name">{name}</h1>
+            <div className="stats-ranked">
+                <h1 className="winrate">{winrate}%</h1>
+                <div>
+                    <h2>{wins} Wins</h2>
+                    <h2>{losses} Losses</h2>
+                </div>
+            </div>
         </div>
      );
 }
